@@ -137,11 +137,10 @@ while True:
         n2 = float(input("Ingrese La Nota 2: "))
         n3 = float(input("Ingrese La Nota 3: "))
         prom = (n1 + n2 + n3)/ 3 
-        
+        #apend para guardar los datos
         registroEstudiante.append(nuevo_registro)
         promEst.append(prom)
         
-        # .append() agrega el elemento al final de la lista
         print(f"¡Registro {nuevo_registro} guardado con éxito!")
 
     elif opcion == "2":
@@ -149,7 +148,7 @@ while True:
             print("No hay nombres en la lista aún.")
         else:
             print(f"\nHay {len (registroEstudiante)} personas en la lista:")
-            # Usamos enumerate para que salgan numerados (1. Jose, 2. Ana...)
+            # Uso enumerate para que salgan numerados
             for i, n in enumerate(registroEstudiante, 1):
                 promedio_actual = promEst[i-1]
                 print(f"{i}. Estudiante: {n} Promedio: {promedio_actual: .2f}")
